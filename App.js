@@ -16,11 +16,20 @@ function App() {
     setTasks([...tasks, taskTest]);
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.view}>
       <ToDoForm addTask={addTask} />
       <ToDoList tasks={tasks} />
     </SafeAreaView>
   );
 }
 
+const styles = StyleSheet.create({
+  view: {
+    flex:1,
+    backgroundColor: "lavender",
+    paddingTop: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 export default App;
